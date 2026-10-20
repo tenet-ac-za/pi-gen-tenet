@@ -1,5 +1,5 @@
 IMG_NAME=Usizo
-PI_GEN_REPO=https://github.com/tenet-ac-za/pi-gen-tenet
+PI_GEN_REPO=https://github.com/tenet-ac-za/pi-gen-eduroam-usizo
 RELEASE=trixie
 APT_PROXY=http://127.0.0.1:3142
 DEPLOY_COMPRESSION=none
@@ -9,6 +9,8 @@ KEYBOARD_KEYMAP=us
 KEYBOARD_LAYOUT="English (US)"
 TIMEZONE_DEFAULT=Africa/Johannesburg
 FIRST_USER_NAME=usizo
+DISABLE_FIRST_BOOT_USER_RENAME=1
+PASSWORDLESS_SUDO=1
 WPA_COUNTRY=ZA
 ENABLE_SSH=1
 PUBKEY_SSH_FIRST_USER="# deploy_users_ssh_keys
