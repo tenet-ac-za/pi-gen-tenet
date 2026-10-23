@@ -13,7 +13,7 @@ gpg pigz xxd arch-test bmap-tools kmod
 And install the following extra packages
 ```
 # Deal with architecture differences
-apt install qemu-user-static
+apt install binfmt-support qemu-user-binfmt qemu-user-static
 # Configure APT_PROXY per config file
 apt install apt-cacher
 # To build proxyguard
@@ -27,13 +27,11 @@ Then build the image using:
 
 ## Configuring a device before deployment
 
-Two config files are needed when deploying a usizo device, both located in `/boot` of the booted image
-(i.e. the root of the SD card after it is flashed).
+Two config files are needed when deploying a usizo device, both located in `/boot/firmware` of the booted image (i.e. the root of the SD card after it is flashed).
 
 ### usizo.cfg
 
-This configures the usizo device, and at the very least needs Wi-Fi credentials in `PASSWORD`. This should
-correspond to the credentials set on web-cpt-02.eduroam.ac.za in the `/etc/freeradius/users_usizo` file.
+This configures the usizo device, and at the very least needs Wi-Fi credentials in `PASSWORD`. This should correspond to the credentials set on web-cpt-02.eduroam.ac.za in the `/etc/freeradius/users_usizo` file.
 
 Some other options can be set. See [defaults](usizo0/00-configure-usizo/files/defaults) for a full set.
 
