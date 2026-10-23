@@ -12,7 +12,7 @@ echo "${NEW_HOSTNAME}" > /etc/hostname
 sed -i "s/127.0.1.1.*${CURRENT_HOSTNAME}/127.0.1.1\t${NEW_HOSTNAME}/g" /etc/hosts
 
 # Set the console password
-if [ -n "${PASSWORD}" && "${PASSWORD}" != "%%FIRST_USER_PASS%%" ] ; then
+if [ -n "${PASSWORD}" -a "${PASSWORD}" != "%%FIRST_USER_PASS%%" ] ; then
     chpasswd <<<"%%FIRST_USER_NAME%%:${PASSWORD}"
 fi
 
