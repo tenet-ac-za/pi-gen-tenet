@@ -22,7 +22,7 @@ case "${ACTION}" in:
 		ip rule add from ${LOCALADDR} table eduvpn priority 100
 		ip rule add oif ${INTERFACE} table eduvpn priority 101
 		# let us know if the device comes up ;-)
-		[ -e /usr/bin/usizo-watchdog.sh ] && /usr/bin/usizo-watchdog.sh
+		[ -e /usr/local/bin/usizo-watchdog.sh ] && /usr/local/bin/usizo-watchdog.sh
 		break
 	;;
 
