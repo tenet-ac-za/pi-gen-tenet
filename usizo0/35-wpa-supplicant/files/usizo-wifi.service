@@ -8,7 +8,7 @@ Documentation=man:wpa-supplicant(5)
 
 [Service]
 Type=oneshot
-ConditionPathExists=/boot/usizo.cfg
+ConditionPathExists=/boot/firmware/usizo.cfg
 ExecStart=/usr/bin/usizo-wifi.sh
 
 [Install]

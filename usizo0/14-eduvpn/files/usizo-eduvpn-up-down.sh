@@ -1,7 +1,7 @@
 #!/bin/bash
 
 [ -e /etc/default/usizo ] && . /etc/default/usizo
-[ -e /boot/usizo.cfg ] && . /boot/usizo.cfg
+[ -e /boot/firmware/usizo.cfg ] && . /boot/firmware/usizo.cfg
 
 INTERFACE=$1
 ACTION=$2
